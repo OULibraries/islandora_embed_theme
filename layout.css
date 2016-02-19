@@ -16,9 +16,10 @@
  */
  
 /* fix possible issue with scrollbars on content inside of the content window */
+
 body{
   overflow:hidden;
-  margin: 0;
+  margin-left: 0;
 }
 
 #content,
@@ -60,11 +61,4 @@ body.two-sidebars #sidebar-first {
 
 .section {
   margin: 10px;
-}
-
-
-
-#book-viewer {
-    position:fixed;
-    top:0;
 }

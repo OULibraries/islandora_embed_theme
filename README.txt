@@ -1,6 +1,4 @@
-Entity iframe theme
+Islandora embed theme
 
-A slightly modified version of Drupal 7's core Stark theme.
-This provides an incredibly basic iframe mode for sites that
-has been optimized for use with entity_iframe, though it is
-not required.
+A slightly modified version of entity iframe theme.
+It also modifies the display of Islandora Internet Archive Bookreader for embeded bookviewer.

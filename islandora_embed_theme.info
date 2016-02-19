@@ -1,0 +1,15 @@
+name = Islandora Embed Theme
+description = An theme used for Islandora embed module
+package = Entity iframe
+core = 7.x
+stylesheets[all][] = layout.css
+scripts[] = js/embed_internet_archive_bookreader.js
+
+; Information added by Drupal.org packaging script on 2014-06-09
+version = "7.x-1.0"
+core = "7.x"
+project = "entity_iframe_theme"
+datestamp = "1402321138"
+
+
+
