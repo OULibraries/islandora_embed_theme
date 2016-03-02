@@ -77,7 +77,7 @@
             // when display the book reader in the two page view mode, the BRtwopageview div top is set wrong:
             var bookBRtwopageview = $("div#BRtwopageview");
             if(bookBRtwopageview) {
-                bookBRtwopageview.css("top", "0px");
+                bookBRtwopageview.css("top", "-10px");
 		bookBRtwopageview.css("position","relative");
             }
         
@@ -91,7 +91,7 @@
 		bookBRcontainer.css("position","relative");
 		bookBRcontainer.css("overflow","hidden");
 		bookBRcontainer.css("top", "40px");
-                bookBRcontainer.css("height", parseInt(height)-85);
+ //               bookBRcontainer.css("height", parseInt(height)-105);
              }
 
             // hide the side bars to better fit the book viewer in the iframe:
