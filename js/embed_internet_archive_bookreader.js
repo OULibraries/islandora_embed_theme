@@ -73,7 +73,17 @@
 		metadataDiv.remove();
 	    }
 
-        
+	    var navCntlBtn = $("div#BRnavCntlBtm");
+	    if(navCntlBtn){
+		navCntlBtn.remove();
+	    }
+
+            // adjust the height of the book reader based on the iframe height:
+            height = Drupal.behaviors.getParamByName("height");
+            if(!height || null == height){
+                height = 500;
+            }
+
             // when display the book reader in the two page view mode, the BRtwopageview div top is set wrong:
             var bookBRtwopageview = $("div#BRtwopageview");
             if(bookBRtwopageview) {
@@ -81,31 +91,25 @@
 		bookBRtwopageview.css("position","relative");
             }
         
-            // adjust the height of the book reader based on the iframe height:
-            height = Drupal.behaviors.getParamByName("height");
-            if(!height || null == height){
-	        height = 800;
-	    }
-             var bookBRcontainer = $("div#BRcontainer");
-             if(bookBRcontainer) {
+            var bookBRcontainer = $("div#BRcontainer");
+            if(bookBRcontainer) {
 		bookBRcontainer.css("position","relative");
 		bookBRcontainer.css("overflow","hidden");
 		bookBRcontainer.css("top", "40px");
- //               bookBRcontainer.css("height", parseInt(height)-105);
-             }
+            }
 
             // hide the side bars to better fit the book viewer in the iframe:
-              var body = $("body");
-              if(body.hasClass("one-sidebar")){
-                  body.removeClass("one-sidebar");
-              }
-              if(body.hasClass("sidebar-first")){
-                  body.removeClass("sidebar-first");
-              }
-              if(!body.hasClass("no-sidebars")){
-                  body.addClass("no-sidebars");
-              }
-                
+            var body = $("body");
+            if(body.hasClass("one-sidebar")){
+                body.removeClass("one-sidebar");
+            }
+            if(body.hasClass("sidebar-first")){
+                body.removeClass("sidebar-first");
+            }
+            if(!body.hasClass("no-sidebars")){
+            	body.addClass("no-sidebars");
+            }
+
         }
     }
 })(jQuery);
