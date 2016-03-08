@@ -73,35 +73,43 @@
 		metadataDiv.remove();
 	    }
 
-        
-            // when display the book reader in the two page view mode, the BRtwopageview div top is set wrong:
-            var bookBRtwopageview = $("div#BRtwopageview");
-            if(bookBRtwopageview) {
-                bookBRtwopageview.css("top", "35px");
-            }
-        
+	    var navCntlBtn = $("div#BRnavCntlBtm");
+	    if(navCntlBtn){
+		navCntlBtn.remove();
+	    }
+
             // adjust the height of the book reader based on the iframe height:
             height = Drupal.behaviors.getParamByName("height");
             if(!height || null == height){
-	        height = 800;
-	    }
-             var bookBRcontainer = $("div#BRcontainer");
-             if(bookBRcontainer) {
-                bookBRcontainer.css("height", parseInt(height)-85);
-             }
+                height = 500;
+            }
+
+            // when display the book reader in the two page view mode, the BRtwopageview div top is set wrong:
+            var bookBRtwopageview = $("div#BRtwopageview");
+            if(bookBRtwopageview) {
+                bookBRtwopageview.css("top", "-10px");
+		bookBRtwopageview.css("position","relative");
+            }
+        
+            var bookBRcontainer = $("div#BRcontainer");
+            if(bookBRcontainer) {
+		bookBRcontainer.css("position","relative");
+		bookBRcontainer.css("overflow","hidden");
+		bookBRcontainer.css("top", "40px");
+            }
 
             // hide the side bars to better fit the book viewer in the iframe:
-              var body = $("body");
-              if(body.hasClass("one-sidebar")){
-                  body.removeClass("one-sidebar");
-              }
-              if(body.hasClass("sidebar-first")){
-                  body.removeClass("sidebar-first");
-              }
-              if(!body.hasClass("no-sidebars")){
-                  body.addClass("no-sidebars");
-              }
-                
+            var body = $("body");
+            if(body.hasClass("one-sidebar")){
+                body.removeClass("one-sidebar");
+            }
+            if(body.hasClass("sidebar-first")){
+                body.removeClass("sidebar-first");
+            }
+            if(!body.hasClass("no-sidebars")){
+            	body.addClass("no-sidebars");
+            }
+
         }
     }
 })(jQuery);
