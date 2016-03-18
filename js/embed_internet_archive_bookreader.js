@@ -95,7 +95,7 @@
             if(bookBRcontainer) {
 		bookBRcontainer.css("position","relative");
 		bookBRcontainer.css("overflow","hidden");
-		bookBRcontainer.css("top", "40px");
+		bookBRcontainer.css("top", "50px");
             }
 
             // hide the side bars to better fit the book viewer in the iframe:
